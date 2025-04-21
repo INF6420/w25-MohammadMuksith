@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Muksith's Portfolio</title>
+    <link rel="stylesheet" href="style.css"> 
+
+</head>
+<body>
+    <header>
+        <h1>Contact</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main> 
+        <div> 
+            <h1>Phone</h1>
+            <p>Please enter your phone number</p>
+        </div>
+        <div> 
+            <h1>Email</h1>
+            <p>Please enter your email</p> 
+
+        </div>
+        <div> 
+            <h1>Address</h1>
+            <p>Please enter your address</p>
+        </div>
+        <div> 
+            <h1>Name</h1>
+            <p>Please enter your name</p>
+        </div>
+        <a href="" aria-labelledby="Submit">Submit</a>
+          <form action="https://formspree.io/f/hl4124@wayne.edu" method="post" class="validate">
+            <label for="name">Your Name</label>
+            <input name="name" id="name" type="text" class="form-input">
+            
+            <label for="email">Your Email</label>
+            <input name="email" id="email" type="email" class="form-input" required>
+            
+            <label for="message">Your Message</label>
+            <textarea name="message" name="message" class="form-input" required></textarea>
+            
+            <!-- your other form fields go here -->
+            <button type="submit">Submit</button>
+          </form>
+          <script>
+            const form = document.getElementById("contactForm");
+            const name = document.getElementById("name");
+            const errorElement = document.getElementById("error");
+            form.addEventListener("submit", (e) => {
+                let messages = []
+                if(name.value === "" || name.value == null) {
+                    messages.push("name is needed")
+                }
+                if(messages.length > 0){
+                    e.preventDefault()
+                    errorElement.innerText = messages.join(",")
+                }
+
+            })
+        </script>
+
+    </main>
+    <footer>
+        <div>
+            <h2>Phone</h2>
+            <p>(XXX)-XXX-XXXX</p>
+        </div>
+        <div>
+            <h2>Email</h2>
+            <p>workemail@gmail.com</p>
+        </div>
+        <div>
+            <h2>Address</h2>
+            <p>123 Main St. Detroit</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammad Muksith's Portfolio</title>
     <link rel="stylesheet" href="style.css"> 
+
 </head>
 <body>
     <header>
         <h1>Home</h1>
-        <nav class = "main-menu">
+        <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -18,10 +19,19 @@
         </nav>
     </header>
     <main> 
-        <div><img src="images/749E13E3-87D5-499D-9470-64294D63B86C_4_5005_c.jpeg" alt=""></div>
+        <button type="button" onclick="myFunction()">Click Me!</button>
+        <p id="demo"> This is a demo</p>
+        <script>
+            function myFunction() {
+                document.getElementById("demo").innerHTML = "Welcome to my website"
+
+            }
+        </script>
+         <div><img src="images/749E13E3-87D5-499D-9470-64294D63B86C_4_5005_c.jpeg" alt=""></div>
         <div> 
             <h1>Description</h1>
             <p>This will contain a quick description about me and my website</p>
+            
         </div>
     </main>
     <footer>
@@ -38,5 +48,6 @@
             <p>123 Main St. Detroit</p>
         </div>
     </footer>
+
 </body>
 </html>
